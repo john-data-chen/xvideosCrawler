@@ -42,6 +42,6 @@ def download(video, url, PATH):
         print("%s Download failed" % status.get("error"))
         # add a list to log how many videos failed
         text_file = open("fail.txt", "a")
-        text_file.write(url + '\n')
+        text_file.write(url)
         text_file.close()
         return (-1)
