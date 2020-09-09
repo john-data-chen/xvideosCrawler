@@ -31,7 +31,7 @@ def download(video, url, PATH):
     try:
         print("Output directory: '%s%s%s'" % (color.get("purple", 1), PATH, color.get("reset")))
         print("Downloading '%s%s%s'" % (color.get("purple", 1), out, color.get("reset")))
-        os.system("wget -O %s/%s '%s' -q -nc" % (PATH, out, video))
+        os.system("wget -O %s/%s '%s' -q -nc --show-progress --random-wait" % (PATH, out, video))
         print("Downloaded '%s%s%s'" % (color.get("purple", 1), out, color.get("reset")))
         # add a list to log how many videos are downloaded
         text_file = open("downloaded.txt", "a")
